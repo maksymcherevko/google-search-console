@@ -1,0 +1,7 @@
+/.idea
+
+/crawl-errors/reports
+/crawl-errors/*.log
+/crawl-errors/*.dat
+
+
