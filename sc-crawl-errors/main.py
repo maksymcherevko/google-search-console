@@ -117,7 +117,7 @@ def main(argv):
     if not jsonResponse:
         return False
 
-    successJsonData = setMarkAsFixed(service, flags, jsonResponse, 5)
+    successJsonData = setMarkAsFixed(service, flags, jsonResponse)
 
     if not successJsonData:
         return False

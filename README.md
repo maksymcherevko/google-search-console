@@ -6,6 +6,4 @@ $ pip install --upgrade git+https://github.com/maksymcherevko/google-search-cons
 
 # Usage
 
-```bash
-$ python -m sc-crawl-errors.main -u https://repka.ua -c notFound -p web
-```
+Module [sc-crawl-errors](sc-crawl-errors/README.md)
