@@ -30,7 +30,7 @@ def getList(service, flags):
         jsonResponse = service.urlcrawlerrorssamples().list(
             siteUrl=flags.url, category=flags.category, platform=flags.platform).execute()
         logger.info('Finish getting the list of urls. SUCCESS')
-    except Exception, e:
+    except Exception as e:
         logger.error('Finish getting the list of urls. FAILED. ' + str(e))
         return False
 
@@ -61,7 +61,7 @@ def setMarkAsFixed(service, flags, jsonData, limit=1000):
 
                 successJsonData.append(row)
                 successCount += 1
-            except Exception, e:
+            except Exception as e:
                 failedCount += 1
 
     logger.info('Finish marking urls as fixed. COUNT [' + str(elementsCount) + '] - SUCCESS [' + str(successCount) + '] - FAILED [' + str(failedCount) + ']')
@@ -79,7 +79,7 @@ def logResponse(jsonData):
         with open(fileName, 'w') as logFile:
             json.dump(jsonData, logFile, indent=4, sort_keys=True)
         logger.info('Finish dumping list of urls. SUCCESS. Filename: ' + str(fileName))
-    except Exception, e:
+    except Exception as e:
             logger.error('Finish dumping list of urls. FAILED. ' + str(e))
             return False
 
@@ -108,7 +108,7 @@ def main(argv):
         service, flags = api_client.init(
             argv, 'webmasters', 'v3', __doc__, __file__, scope='https://www.googleapis.com/auth/webmasters', parents=[argparser])
         logger.info('Finish API service. SUCCESS')
-    except Exception, e:
+    except Exception as e:
         logger.error('Finish API service. FAILED. ' + str(e))
         return False
 
