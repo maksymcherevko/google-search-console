@@ -6,4 +6,4 @@ $ pip install --upgrade git+https://github.com/maksymcherevko/google-search-cons
 
 # Usage
 
-Module [sc-crawl-errors](sc-crawl-errors/README.md)
+Module [sc-crawl-errors](sc-crawl-errors#readme)
