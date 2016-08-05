@@ -1,3 +1,7 @@
+# About
+
+Processes error notification (limit 1000 records per day). Removes them from SC and stores on the server (in JSON format). So section "Crawl Errors" is kept "clean" for new notifications, and the records themselves are transferred to the server for storage and analysis.
+
 # Usage
 
 Create your credentials in [Google API Manager](https://console.developers.google.com)
